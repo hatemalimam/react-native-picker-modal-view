@@ -10,5 +10,7 @@ export interface ISearch {
 	searchText: string;
 	SearchInputProps?: TextInputProps;
 	backButtonDisabled?: boolean,
-	searchInputStyle: ViewStyle
+	searchInputStyle: ViewStyle,
+	leftArrowIcon?: JSX.Element, 
+	closeArrowIcon?: JSX.Element
 }

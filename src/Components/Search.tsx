@@ -8,12 +8,12 @@ import { ISearch } from '@Interfaces';
 
 export class SearchComponent extends React.PureComponent<ISearch, {}> {
 	public render(): JSX.Element {
-		const { SearchInputProps, placeholderTextColor, onClose, setText, forceSelect, searchText, onBackRequest, backButtonDisabled, searchInputStyle } = this.props;
+		const { SearchInputProps, placeholderTextColor, onClose, setText, forceSelect, searchText, onBackRequest, backButtonDisabled, searchInputStyle, leftArrowIcon, closeArrowIcon } = this.props;
 		return (
 			<View style={SearchStyle.searchArea}>
 				{
 					!backButtonDisabled &&
-						this.touchableOpacityButton(onBackRequest, require('../Assets/Images/left-arrow.png'), SearchStyle.leftBtn, SearchStyle.backButton)
+						this.touchableOpacityButton(onBackRequest, require('../Assets/Images/left-arrow.png'), SearchStyle.leftBtn, SearchStyle.backButton, leftArrowIcon)
 				}
 				<TextInput
 					placeholder={searchText}
@@ -24,16 +24,16 @@ export class SearchComponent extends React.PureComponent<ISearch, {}> {
 					{...SearchInputProps}
 				/>
 				{!forceSelect &&
-					this.touchableOpacityButton(onClose, require('../Assets/Images/close.png'), SearchStyle.leftBtn, SearchStyle.closeButton)
+					this.touchableOpacityButton(onClose, require('../Assets/Images/close.png'), SearchStyle.leftBtn, SearchStyle.closeButton, closeArrowIcon)
 
 				}
 			</View>
 		);
 	}
-	public touchableOpacityButton(onPress, imgSrc, buttonStyle, imgStyle): JSX.Element {
+	public touchableOpacityButton(onPress, imgSrc, buttonStyle, imgStyle, Component): JSX.Element {
 		return (
 			<TouchableOpacity onPress={() => onPress()} style={buttonStyle}>
-				<Image source={imgSrc} style={imgStyle} />
+				{Component ? <Component style={imgStyle} />: <Image source={imgSrc} style={imgStyle} />}
 			</TouchableOpacity>
 		)
 	}

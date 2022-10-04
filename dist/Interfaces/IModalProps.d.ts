@@ -36,6 +36,8 @@ export interface IModalProps {
     renderSearch?: (onClose: () => void, onBack: () => void) => JSX.Element;
     searchInputStyle?: ViewStyle;
     alphabetsStyle?: ViewStyle;
+    leftArrowIcon?: JSX.Element;
+    closeArrowIcon?: JSX.Element;
 }
 export interface IModalState {
     modalVisible: boolean;

@@ -1,3 +1,4 @@
+/// <reference types="react" />
 import { TextInputProps, ViewStyle } from 'react-native';
 export interface ISearch {
     placeholderTextColor: string;
@@ -9,4 +10,6 @@ export interface ISearch {
     SearchInputProps?: TextInputProps;
     backButtonDisabled?: boolean;
     searchInputStyle: ViewStyle;
+    leftArrowIcon?: JSX.Element;
+    closeArrowIcon?: JSX.Element;
 }
