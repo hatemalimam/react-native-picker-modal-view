@@ -156,6 +156,10 @@ export default class Main extends React.Component<{}, { selectedItem: {} }> {
 | **requireSelection**              | `boolean`  | Require at least one list item is selected             | `"false"`                                   |
 | **backButtonDisabled**            | `boolean`  | Hide to back button             						  | `"false"`                                   |
 | **renderSearch**            | `Function`  | Render custom search input             						  | ``                                   |
+| **searchInputStyle**                      | `object `  | Applied to the search input text
+| **alphabetsStyle**                      | `object `  | Applied to the Alphabet List                                     |  
+| **leftArrowIcon**                      | `Element `  | Custom JSX Element for the left back button (ex. `<FontAwesome5 name={'chevron-left'} />`)                                     |                 
+| **closeArrowIcon**                      | `Element `  | Custom JSX Element for the close button (ex. `<FontAwesome5 name={'times'} />`)                                     |                                     
 
 # Core Props of React Native
 <br/>
@@ -165,6 +169,7 @@ export default class Main extends React.Component<{}, { selectedItem: {} }> {
 | **ModalProps**       | `object` | React Native Modal Props     |         |
 | **FlatListProps**    | `object` | React Native Flatlist Props  |         |
 | **SearchInputProps** | `object` | React Native TextInput Props |         |
+| **ContainerProps** | `object` | React Native View Props |         |
 
 <br/>
 <br/>
@@ -207,6 +212,7 @@ npm install
 
 #### Releases
 
+- 1.3.3 - Added `ContainerProps`,  `searchInputStyle`, `alphabetsStyle`, `leftArrowIcon`, `closeArrowIcon ` Thanks to @hatemalimam
 - 1.3.2 - Added renderSearch feature <a href="https://github.com/pankod/react-native-picker-modal-view/pull/54">#54</a> Thanks to @murilo-campaner
 - 1.3.1 - Fixed <a href="https://github.com/pankod/react-native-picker-modal-view/issues/44">#44</a> Thanks to @fnando
 - 1.3.0 - No back button support <a href="https://github.com/pankod/react-native-picker-modal-view/issues/42">#42</a> Thanks to @ChildishForces
