@@ -1,8 +1,9 @@
 /// <reference types="react" />
-import { FlatListProps, TextInputProps, ModalBaseProps, ModalPropsIOS, ModalPropsAndroid } from 'react-native';
+import { FlatListProps, TextInputProps, ModalBaseProps, ModalPropsIOS, ModalPropsAndroid, ViewProps, ViewPropsAndroid, ViewPropsIOS } from 'react-native';
 import { AnimationTypeEnum } from '../Enum';
 import { IModalListInDto } from './';
 declare type ModalProps = ModalBaseProps | ModalPropsIOS | ModalPropsAndroid;
+declare type ContainerProps = ViewProps | ViewPropsAndroid | ViewPropsIOS;
 declare type ListType = IModalListInDto[];
 export interface IModalProps {
     modalAnimationType?: AnimationTypeEnum;
@@ -25,6 +26,7 @@ export interface IModalProps {
     searchPlaceholderText: string;
     SearchInputProps?: TextInputProps;
     ModalProps?: ModalProps;
+    ContainerProps?: ContainerProps;
     autoSort?: boolean;
     disabled: boolean;
     requireSelection: boolean;

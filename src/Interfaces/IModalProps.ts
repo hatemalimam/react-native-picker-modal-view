@@ -5,6 +5,9 @@ import {
 	ModalBaseProps,
 	ModalPropsIOS,
 	ModalPropsAndroid,
+	ViewProps,
+	ViewPropsAndroid,
+	ViewPropsIOS,	
 } from 'react-native';
 
 // Local Imports
@@ -12,6 +15,8 @@ import { AnimationTypeEnum } from '@Enum';
 import { IModalListInDto } from '@Interfaces';
 
 type ModalProps = ModalBaseProps | ModalPropsIOS | ModalPropsAndroid;
+
+type ContainerProps = ViewProps | ViewPropsAndroid | ViewPropsIOS;
 
 type ListType = IModalListInDto[];
 
@@ -36,6 +41,7 @@ export interface IModalProps {
 	searchPlaceholderText: string;
 	SearchInputProps?: TextInputProps;
 	ModalProps?: ModalProps;
+	ContainerProps?: ContainerProps;
 	autoSort?: boolean;
 	disabled: boolean;
 	requireSelection: boolean;
