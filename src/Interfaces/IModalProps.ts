@@ -8,6 +8,7 @@ import {
 	ViewProps,
 	ViewPropsAndroid,
 	ViewPropsIOS,	
+	ViewStyle
 } from 'react-native';
 
 // Local Imports
@@ -49,6 +50,7 @@ export interface IModalProps {
 	renderSelectView?: (disabled: boolean, selected: IModalListInDto, showModal: () => void) => React.ReactElement
 	backButtonDisabled?: boolean,
 	renderSearch?: (onClose: () => void, onBack: () => void ) =>  JSX.Element,
+	searchInputStyle?: ViewStyle,
 }
 
 export interface IModalState {

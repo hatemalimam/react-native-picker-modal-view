@@ -1,5 +1,5 @@
 // Global Imports
-import { TextInputProps } from 'react-native';
+import { TextInputProps, ViewStyle } from 'react-native';
 
 export interface ISearch {
 	placeholderTextColor: string;
@@ -9,5 +9,6 @@ export interface ISearch {
 	setText: (text: string) => void;
 	searchText: string;
 	SearchInputProps?: TextInputProps;
-	backButtonDisabled?: boolean
+	backButtonDisabled?: boolean,
+	searchInputStyle: ViewStyle
 }

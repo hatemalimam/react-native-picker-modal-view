@@ -72,7 +72,7 @@ export class ModalComponent extends React.PureComponent<IModalProps, IModalState
 	}
 
 	public render(): JSX.Element {
-		const { autoSort, modalAnimationType, onClosed, showAlphabeticalIndex, searchInputTextColor, keyExtractor, showToTopButton, onEndReached, removeClippedSubviews, FlatListProps, selectPlaceholderText, searchPlaceholderText, SearchInputProps, selected, disabled, items, requireSelection, renderSelectView, ModalProps, ContainerProps, backButtonDisabled, renderSearch } = this.props;
+		const { autoSort, modalAnimationType, onClosed, showAlphabeticalIndex, searchInputTextColor, keyExtractor, showToTopButton, onEndReached, removeClippedSubviews, FlatListProps, selectPlaceholderText, searchPlaceholderText, SearchInputProps, selected, disabled, items, requireSelection, renderSelectView, ModalProps, ContainerProps, backButtonDisabled, renderSearch, searchInputStyle } = this.props;
 
 		const { modalVisible, alphabeticalIndexChars, stickyBottomButton, selectedAlpha, selectedObject, searchText } = this.state;
 
@@ -106,6 +106,7 @@ export class ModalComponent extends React.PureComponent<IModalProps, IModalState
 									forceSelect={requireSelection}
 									setText={(text: string) => this.setText(text)}
 									backButtonDisabled={backButtonDisabled}
+									searchInputStyle={searchInputStyle}
 									{...SearchInputProps}
 								/>
 							)
