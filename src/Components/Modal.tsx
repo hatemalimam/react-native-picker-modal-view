@@ -72,7 +72,7 @@ export class ModalComponent extends React.PureComponent<IModalProps, IModalState
 	}
 
 	public render(): JSX.Element {
-		const { autoSort, modalAnimationType, onClosed, showAlphabeticalIndex, searchInputTextColor, keyExtractor, showToTopButton, onEndReached, removeClippedSubviews, FlatListProps, selectPlaceholderText, searchPlaceholderText, SearchInputProps, selected, disabled, items, requireSelection, renderSelectView, ModalProps, ContainerProps, backButtonDisabled, renderSearch, searchInputStyle } = this.props;
+		const { autoSort, modalAnimationType, onClosed, showAlphabeticalIndex, searchInputTextColor, keyExtractor, showToTopButton, onEndReached, removeClippedSubviews, FlatListProps, selectPlaceholderText, searchPlaceholderText, SearchInputProps, selected, disabled, items, requireSelection, renderSelectView, ModalProps, ContainerProps, backButtonDisabled, renderSearch, searchInputStyle, alphabetsStyle } = this.props;
 
 		const { modalVisible, alphabeticalIndexChars, stickyBottomButton, selectedAlpha, selectedObject, searchText } = this.state;
 
@@ -143,6 +143,7 @@ export class ModalComponent extends React.PureComponent<IModalProps, IModalState
 									setAlphabet={(alphabet: string) => this.setAlphabet(alphabet)}
 									alphabets={alphabeticalIndexChars}
 									selectedAlpha={selectedAlpha}
+									alphabetsStyle={alphabetsStyle}
 								/>
 							</View>
 						</KeyboardAvoidingView>

@@ -51,6 +51,7 @@ export interface IModalProps {
 	backButtonDisabled?: boolean,
 	renderSearch?: (onClose: () => void, onBack: () => void ) =>  JSX.Element,
 	searchInputStyle?: ViewStyle,
+	alphabetsStyle?: ViewStyle
 }
 
 export interface IModalState {

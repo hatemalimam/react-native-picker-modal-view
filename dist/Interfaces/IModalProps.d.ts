@@ -1,5 +1,5 @@
 /// <reference types="react" />
-import { FlatListProps, TextInputProps, ModalBaseProps, ModalPropsIOS, ModalPropsAndroid, ViewProps, ViewPropsAndroid, ViewPropsIOS } from 'react-native';
+import { FlatListProps, TextInputProps, ModalBaseProps, ModalPropsIOS, ModalPropsAndroid, ViewProps, ViewPropsAndroid, ViewPropsIOS, ViewStyle } from 'react-native';
 import { AnimationTypeEnum } from '../Enum';
 import { IModalListInDto } from './';
 declare type ModalProps = ModalBaseProps | ModalPropsIOS | ModalPropsAndroid;
@@ -34,6 +34,8 @@ export interface IModalProps {
     renderSelectView?: (disabled: boolean, selected: IModalListInDto, showModal: () => void) => React.ReactElement;
     backButtonDisabled?: boolean;
     renderSearch?: (onClose: () => void, onBack: () => void) => JSX.Element;
+    searchInputStyle?: ViewStyle;
+    alphabetsStyle?: ViewStyle;
 }
 export interface IModalState {
     modalVisible: boolean;
