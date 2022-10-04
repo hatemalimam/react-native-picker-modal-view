@@ -12,7 +12,7 @@ export class SearchComponent extends React.PureComponent {
                 this.touchableOpacityButton(onClose, require('../Assets/Images/close.png'), SearchStyle.leftBtn, SearchStyle.closeButton, closeArrowIcon)));
     }
     touchableOpacityButton(onPress, imgSrc, buttonStyle, imgStyle, Component) {
-        return (React.createElement(TouchableOpacity, { onPress: () => onPress(), style: buttonStyle }, Component ? React.createElement(Component, { style: imgStyle }) : React.createElement(Image, { source: imgSrc, style: imgStyle })));
+        return (React.createElement(TouchableOpacity, { onPress: () => onPress(), style: buttonStyle }, Component ? Component : React.createElement(Image, { source: imgSrc, style: imgStyle })));
     }
 }
 //# sourceMappingURL=Search.js.map

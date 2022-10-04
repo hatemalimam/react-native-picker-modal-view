@@ -33,7 +33,7 @@ export class SearchComponent extends React.PureComponent<ISearch, {}> {
 	public touchableOpacityButton(onPress, imgSrc, buttonStyle, imgStyle, Component): JSX.Element {
 		return (
 			<TouchableOpacity onPress={() => onPress()} style={buttonStyle}>
-				{Component ? <Component style={imgStyle} />: <Image source={imgSrc} style={imgStyle} />}
+				{Component ? Component: <Image source={imgSrc} style={imgStyle} />}
 			</TouchableOpacity>
 		)
 	}
